@@ -205,7 +205,6 @@ func readProductFiles() ([]*pb.Product, error) {
 		if err != nil {
 			return nil, err
 		}
-
 		var res pb.ListProductsResponse
 		if err := protojson.Unmarshal(jsonData, &res); err != nil {
 			return nil, err
@@ -315,6 +314,8 @@ func createClient(ctx context.Context, svcAddr string) (*grpc.ClientConn, error)
 		grpc.WithStatsHandler(otelgrpc.NewClientHandler()),
 	)
 }
+
+
 
 
 
