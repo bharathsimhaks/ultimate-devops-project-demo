@@ -20,7 +20,7 @@ go build -o product-catalog .
 
 From the root directory, run:
 
-```sh
+```sh  
 docker compose build product-catalog
 ```
 
